@@ -14,9 +14,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 *, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
 
-p {
-	text-transform: lowercase;
-}
+
 /* =============================================================================
   #GENERAL
 ============================================================================= */
@@ -32,7 +30,7 @@ html {
 }
 
 body {
-    font-family: 'Rubik', Helvetica, Arial, Verdana, sans-serif;
+    font-family: 'Advent Pro', Helvetica, Arial, Verdana, sans-serif;
     color: #5c5c5c;
     font-size: 18px;
     line-height: 1.6;
@@ -45,6 +43,7 @@ body {
 
 .container {
   margin: 0 auto;
+  padding: 0 10px;
   width: 100%;
   max-width: 1080px;
 }
@@ -70,7 +69,6 @@ img[height] {
   #TYPOGRAPHY
 ============================================================================= */
 h1, h2, h3 {
-  font-family: 'Big Shoulders Display', Helvetica, Arial, Verdana, sans-serif;
   color: #000000;
 }
 
@@ -100,7 +98,6 @@ p {
   display: inline-flex;
   padding: 10px 30px;
 
-  font-family: 'Big Shoulders Display', Helvetica, Arial, Verdana, sans-serif;
   color: #ffffff;
   font-size: 20px;
   font-weight: 700;
@@ -230,10 +227,10 @@ p {
     margin-bottom: 10px;
 
     color: inherit;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 34px;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     line-height: 1.2;
   }
 
@@ -279,7 +276,7 @@ p {
 
   .service {
     flex: 0 0 100%;
-    padding: 15px;
+    padding: 15px 30px;
   }
 
   @media (min-width: 600px) {
@@ -297,24 +294,46 @@ p {
   }
 
     .service h3 {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 0 6px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 0 30px;
+      min-height: 3em;
 
-      box-shadow: inset 0 -16px 0 0 #ebebeb;
+      font-size: 18px;
     }
 
-    /* .service h3::before {
+    .service h3::before {
       content: "";
       position: absolute;
       z-index: 0;
-      top: -4px;
-      bottom: -4px;
-      left: -4px;
-      right: -4px;
+      top: -2px;
+      bottom: -2px;
+      left: -8px;
+      right: -8px;
 
-      background-color: #E2A079;
-    } */
+      background-color: #fcede5;
+
+      transform: skewX(-10deg);
+    }
+
+      .service h3 span {
+        position: relative;
+      }
+
+      .service h3 .service__price {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        padding: 2px 8px;
+
+        background-color: #E2A079;
+        box-shadow: -4px 4px 0 0 #ffffff;
+        transform: skewX(-10deg) translate(50%, -50%);
+      }
 
 
 /* =============================================================================
@@ -462,5 +481,5 @@ p {
       bottom: 0;
       left: 0;
 
-      background-color: rgba(20, 12, 4, 0.75);
+      background-color: rgba(20, 12, 4, 0.85);
     }
