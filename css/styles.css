@@ -49,6 +49,17 @@ body {
 }
 
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
 /* =============================================================================
   #IMAGES
 ============================================================================= */
@@ -205,8 +216,7 @@ p {
   position: relative;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 
   color: #ffffff;
   text-align: center;
@@ -263,6 +273,73 @@ p {
     background-color: rgba(0, 0, 0, .5);
   }
 
+
+/* Hero layout */
+.hero__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+
+
+.hero__address {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+}
+
+  .hero__address svg {
+    margin-right: 10px;
+    height: 14px;
+  }
+
+
+.hero__social {
+  display: flex;
+}
+
+  .hero__social li + li {
+    margin-left: 20px;
+  }
+
+    .hero__social li a {
+      display: flex;
+
+      transition: opacity 150ms ease-in-out;
+    }
+
+  .hero__social svg {
+    height: 28px;
+  }
+
+  .hero__social:hover a {
+    opacity: .5;
+  }
+
+  .hero__social:hover a:hover {
+    opacity: 1;
+  }
+
+
+.scroll-down img {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+}
+
+
+.hero__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 60px 0;
+}
 
 /* =============================================================================
   #SERVICES
@@ -329,6 +406,8 @@ p {
         right: 0;
         display: inline-block;
         padding: 2px 8px;
+
+        color: #ffffff;
 
         background-color: #E2A079;
         box-shadow: -4px 4px 0 0 #ffffff;
@@ -426,6 +505,19 @@ p {
     }
 
 
+/* =============================================================================
+  #MAPS
+============================================================================= */
+.maps iframe {
+  margin-bottom: -8px;
+  height: 30vw;
+}
+
+@media (max-width: 700px) {
+  .maps iframe {
+    height: 280px;
+  }
+}
 
 /* =============================================================================
   #FOOTER
