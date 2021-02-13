@@ -148,9 +148,15 @@ p {
   #CONTENT SECTION
 ============================================================================= */
 .content {
-  padding: 80px 0;
+  padding: 40px 0;
 
   background-color: #ffffff;
+}
+
+@media (min-width: 700px) {
+  .content {
+    padding: 80px;
+  }
 }
 
   .content__intro {
@@ -162,7 +168,8 @@ p {
   }
 
     .content__intro p {
-      font-size: 1.1em;
+      font-size: 1.2em;
+      font-weight: 600;
     }
 
 
@@ -171,7 +178,7 @@ p {
 ============================================================================= */
 .highlight {
   position: relative;
-  padding: 120px 40px;
+  padding: 60px 10px;
 
   color: #ffffff;
 
@@ -182,6 +189,12 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+}
+
+@media (min-width: 700px) {
+  .highlight {
+    padding: 120px 40px;
+  }
 }
 
   .highlight__content {
@@ -213,6 +226,7 @@ p {
   #HERO
 ============================================================================= */
 .hero {
+  overflow: hidden;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -278,27 +292,54 @@ p {
 .hero__head {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: 15px;
   width: 100%;
 }
 
+@media (min-width: 700px) {
+  .hero__head {
+    flex-direction: row;
+  }
+}
 
-.hero__address {
+
+.hero__contact {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
 
   font-weight: 700;
 }
 
-  .hero__address svg {
-    margin-right: 10px;
+@media (min-width: 700px) {
+  .hero__contact {
+    justify-content: flex-start;
+  }
+}
+
+  .hero__contact svg {
     height: 14px;
+  }
+
+  .hero__contact li + li {
+    margin-left: 40px;
   }
 
 
 .hero__social {
   display: flex;
+  margin-top: 15px;
+  align-self: flex-end;
+}
+
+@media (min-width: 700px) {
+  .hero__social {
+    margin-top: 0;
+    align-self: center;
+  }
 }
 
   .hero__social li + li {
@@ -308,7 +349,7 @@ p {
     .hero__social li a {
       display: flex;
 
-      transition: opacity 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
     }
 
   .hero__social svg {
@@ -317,10 +358,13 @@ p {
 
   .hero__social:hover a {
     opacity: .5;
+    
+    transform: scale(.8);
   }
 
   .hero__social:hover a:hover {
     opacity: 1;
+    transform: scale(1.1);
   }
 
 
@@ -363,7 +407,7 @@ p {
     }
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 900px) {
     .service {
       flex: 0 0 calc(100% / 3);
       margin-top: 40px;
@@ -530,7 +574,7 @@ p {
   .footer__content {
     position: relative;
     flex: 0 0 100%;
-    padding: 80px 40px;
+    padding: 40px 15px;
 
     color: #ffffff;
 
@@ -543,6 +587,7 @@ p {
   @media (min-width: 700px) {
     .footer__content {
       flex: 0 0 50%;
+      padding: 80px 40px;
     }
   }
 
