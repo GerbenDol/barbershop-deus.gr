@@ -243,6 +243,12 @@ p {
   background-attachment: fixed;
 }
 
+@media (max-width: 460px) {
+  .hero {
+    min-height: 80vh;
+  }
+}
+
   .hero > * {
     position: relative;
   }
@@ -311,17 +317,27 @@ p {
   width: 100%;
   align-items: center;
 
+  font-size: 14px;
   font-weight: 700;
 }
 
 @media (min-width: 700px) {
   .hero__contact {
     justify-content: flex-start;
+
+    font-size: 18px;
   }
 }
 
   .hero__contact svg {
+    margin-right: 5px;
     height: 14px;
+    width: 14px;
+  }
+
+  .hero__contact li {
+    display: flex;
+    align-items: center;
   }
 
   .hero__contact li + li {
