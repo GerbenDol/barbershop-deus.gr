@@ -143,7 +143,15 @@ p {
 
   .btn span {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+    .btn span svg {
+      margin-right: 20px;
+      height: 16px;
+    }
 
 
 /* =============================================================================
